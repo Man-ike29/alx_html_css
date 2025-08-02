@@ -82,13 +82,57 @@ nav a:hover {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    main {
+    body.works_on_smartphone main {
         flex-direction: column;
     }
     
-    aside {
+    body.works_on_smartphone aside {
         border-left: none;
         border-top: 1px solid #dee2e6;
+    }
+    
+    body.works_on_smartphone header {
+        padding: 15px;
+    }
+    
+    body.works_on_smartphone article,
+    body.works_on_smartphone aside {
+        padding: 15px;
+    }
+    
+    body.works_on_smartphone nav a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Additional responsive improvements for very small screens */
+@media (max-width: 480px) {
+    body.works_on_smartphone {
+        padding: 0;
+    }
+    
+    body.works_on_smartphone header {
+        padding: 10px;
+    }
+    
+    body.works_on_smartphone header h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    
+    body.works_on_smartphone article,
+    body.works_on_smartphone aside {
+        padding: 10px;
+    }
+    
+    body.works_on_smartphone aside table {
+        font-size: 0.8em;
+    }
+    
+    body.works_on_smartphone aside th,
+    body.works_on_smartphone aside td {
+        padding: 4px 6px;
     }
 }
 
