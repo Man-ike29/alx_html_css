@@ -1,0 +1,139 @@
+/* Base CSS styles for the portfolio */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #34495e;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Article container */
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+nav a {
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    font-style: italic;
+}
