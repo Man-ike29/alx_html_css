@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS Advanced Project - Modern responsive website showcasing advanced CSS techniques">
+    <meta name="keywords" content="CSS, HTML, JavaScript, responsive design, web development">
+    <meta name="author" content="CSS Advanced Project">
+    <title>CSS Advanced Project</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logos/logo.png" alt="Company Logo" class="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to CSS Advanced</h1>
+                    <p class="hero-description">
+                        Discover the power of modern CSS techniques and create stunning, responsive websites
+                        with advanced styling and animations.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn btn-primary">Get Started</a>
+                        <a href="#services" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-image.png" alt="CSS Advanced Illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About This Project</h2>
+                    <p class="section-subtitle">
+                        A showcase of advanced CSS techniques and modern web development practices
+                    </p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Modern CSS Techniques</h3>
+                        <p>
+                            This project demonstrates the latest CSS features including Grid, Flexbox,
+                            custom properties, animations, and responsive design principles.
+                        </p>
+                        <ul class="feature-list">
+                            <li>CSS Grid and Flexbox layouts</li>
+                            <li>Custom CSS properties (variables)</li>
+                            <li>Advanced animations and transitions</li>
+                            <li>Responsive design patterns</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/about-image.png" alt="CSS Features">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">CSS Features</h2>
+                    <p class="section-subtitle">
+                        Explore the advanced CSS techniques implemented in this project
+                    </p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/icons/grid-icon.svg" alt="CSS Grid">
+                        </div>
+                        <h3 class="service-title">CSS Grid</h3>
+                        <p class="service-description">
+                            Advanced layout system for creating complex, responsive grid structures.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/icons/flexbox-icon.svg" alt="Flexbox">
+                        </div>
+                        <h3 class="service-title">Flexbox</h3>
+                        <p class="service-description">
+                            Flexible box layout for efficient alignment and distribution of elements.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/icons/animation-icon.svg" alt="Animations">
+                        </div>
+                        <h3 class="service-title">Animations</h3>
+                        <p class="service-description">
+                            Smooth transitions and keyframe animations for enhanced user experience.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/icons/responsive-icon.svg" alt="Responsive Design">
+                        </div>
+                        <h3 class="service-title">Responsive Design</h3>
+                        <p class="service-description">
+                            Mobile-first approach ensuring optimal viewing across all devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">
+                        Have questions about CSS or web development? Let's connect!
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>contact@cssadvanced.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>GitHub</h3>
+                            <p>github.com/css-advanced</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Portfolio</h3>
+                            <p>cssadvanced.com</p>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CSS Advanced</h3>
+                    <p>Showcasing modern CSS techniques and best practices for web development.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS</a></li>
+                        <li><a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSS Advanced Project. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
