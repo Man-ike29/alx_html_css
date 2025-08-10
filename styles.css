@@ -135,6 +135,100 @@ body {
     margin: 0 auto;
 }
 
+/* What We Do Section */
+.what-we-do-section {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    padding: 110px 0;
+}
+
+.what-we-do-content {
+    text-align: center;
+}
+
+.what-we-do-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--color-dark);
+}
+
+.what-we-do-text {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 640px;
+    margin: 0 auto 95px;
+    color: var(--color-dark);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    animation: floatIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Staggered animation delays for service items */
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
+
+.service-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 101, 101, 0.2);
+}
+
+.service-icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-icon:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.service-icon svg {
+    width: 94px;
+    height: 94px;
+    transition: all 0.3s ease;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-title {
+    color: var(--color-primary);
+}
+
+.service-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-description {
+    transform: translateY(-5px);
+}
+
 /* Our Results Section */
 .results-section {
     background: linear-gradient(rgba(7, 22, 41, 0.8), rgba(7, 22, 41, 0.8)), url('headphones_hero_2.jpg');
@@ -172,17 +266,47 @@ body {
 .result-item {
     text-align: center;
     position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    animation: bounceIn 0.8s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.3);
+}
+
+/* Staggered animation delays for result items */
+.result-item:nth-child(1) { animation-delay: 0.2s; }
+.result-item:nth-child(2) { animation-delay: 0.4s; }
+.result-item:nth-child(3) { animation-delay: 0.6s; }
+.result-item:nth-child(4) { animation-delay: 0.8s; }
+
+.result-item:hover {
+    transform: translateY(-15px) scale(1.1);
+    filter: brightness(1.1);
 }
 
 .result-icon {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
-.result-icon img {
+/* CSS Pentagon Shape */
+.pentagon {
     width: 190px;
     height: 190px;
+    position: relative;
+    background-color: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    transition: all 0.4s ease;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+.result-item:hover .pentagon {
+    transform: rotate(72deg) scale(1.1);
+    background: linear-gradient(45deg, var(--color-primary), #ff8a80);
+    box-shadow: 0 0 30px rgba(255, 101, 101, 0.6);
+    animation: spin 1s ease-in-out;
 }
 
 .result-number {
@@ -195,12 +319,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: -20px;
+    z-index: 2;
+    transition: all 0.3s ease;
+    animation: countUp 1s ease-out 1s forwards;
+}
+
+.result-item:hover .result-number {
+    transform: translate(-50%, -50%) scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .result-label {
     font-size: 14px;
     color: var(--color-white);
     margin-top: 160px;
+    transition: all 0.3s ease;
+}
+
+.result-item:hover .result-label {
+    transform: translateY(-5px);
+    color: #ffcccb;
 }
 
 /* Mobile Styles */
@@ -271,7 +409,7 @@ body {
         margin: 0 auto;
     }
     
-    .result-icon img {
+    .pentagon {
         width: 150px;
         height: 150px;
     }
@@ -512,5 +650,206 @@ body {
     .social-icon svg {
         width: 25px;
         height: 25px;
+    }
+}
+
+/* ========================================
+   SPECTACULAR ANIMATIONS KEYFRAMES
+   ======================================== */
+
+/* Float In Animation for Service Items */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce In Animation for Result Items */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pulse Animation for Pentagons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 101, 101, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 101, 101, 0);
+    }
+}
+
+/* Spin Animation for Pentagon Hover */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.15);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+/* Count Up Animation for Numbers */
+@keyframes countUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Wiggle Animation for Service Icons */
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 101, 101, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 101, 101, 0.8), 0 0 30px rgba(255, 101, 101, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 101, 101, 0.5);
+    }
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Additional hover effects for service items */
+.service-item:hover .service-icon svg {
+    animation: wiggle 0.8s ease-in-out;
+}
+
+/* Continuous floating animation for result items */
+.result-item {
+    animation: bounceIn 0.8s ease-out forwards, floating 3s ease-in-out infinite 2s;
+}
+
+/* Glow effect on pentagon hover */
+.result-item:hover .pentagon {
+    animation: glow 1s ease-in-out infinite;
+}
+
+/* Mobile responsive animations */
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .what-we-do-content h2 {
+        font-size: 28px;
+    }
+    
+    .what-we-do-section {
+        padding: 60px 0;
+    }
+    
+    .what-we-do-text {
+        font-size: 14px;
+        margin-bottom: 60px;
+    }
+}
+
+/* Enhanced mobile animations */
+@media screen and (max-width: 480px) {
+    .what-we-do-content h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        max-width: 300px;
+    }
+    
+    .service-item {
+        max-width: 207px;
+        margin: 0 auto;
+    }
+    
+    .service-item:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    .result-item:hover {
+        transform: translateY(-8px) scale(1.05);
+    }
+    
+    .pentagon {
+        animation: pulse 3s ease-in-out infinite alternate;
+    }
+    
+    .service-icon svg {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .service-title {
+        font-size: 16px;
+    }
+    
+    .service-description {
+        font-size: 12px;
     }
 }
