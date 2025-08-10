@@ -456,3 +456,61 @@ body {
         padding: 12px 0;
     }
 }
+
+/* Footer Section */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 90px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-logo img {
+    height: 32px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.social-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mobile Styles for Footer */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 60px 0;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+}
