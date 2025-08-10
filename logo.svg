@@ -1,0 +1,5 @@
+<svg width="161" height="32" viewBox="0 0 161 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M85.5 16C85.5 24.8366 78.3366 32 69.5 32C60.6634 32 53.5 24.8366 53.5 16C53.5 7.16344 60.6634 0 69.5 0C78.3366 0 85.5 7.16344 85.5 16Z" fill="#FF6565"/>
+<path d="M69.5 8C65.3579 8 62 11.3579 62 15.5C62 19.6421 65.3579 23 69.5 23C73.6421 23 77 19.6421 77 15.5C77 11.3579 73.6421 8 69.5 8Z" fill="white"/>
+<text x="95" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">headphones</text>
+</svg>
