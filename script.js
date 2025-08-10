@@ -1,5 +1,59 @@
-// Form validation and interactions
+// Hamburger Menu Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+    
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        hamburger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (mobileNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+    
+    // Close mobile menu
+    function closeMobileMenu() {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    hamburger.addEventListener('click', toggleMobileMenu);
+    
+    // Close menu when clicking on nav items
+    mobileNavItems.forEach(item => {
+        item.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close menu when clicking outside
+    mobileNav.addEventListener('click', function(e) {
+        if (e.target === mobileNav) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 480 && mobileNav.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    });
+
+// Form validation and interactions
     const form = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
