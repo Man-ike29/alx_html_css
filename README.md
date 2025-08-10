@@ -66,7 +66,7 @@ headphones/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/alx_html_css.git
+   git clone https://github.com/Man-ike29/alx_html_css.git
    ```
 
 2. Navigate to the project directory:
@@ -175,9 +175,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+**Man-ike29**
+- GitHub: [@Man-ike29](https://github.com/Man-ike29)
+- Project Repository: [alx_html_css](https://github.com/Man-ike29/alx_html_css)
 
 ## 🙏 Acknowledgments
 
